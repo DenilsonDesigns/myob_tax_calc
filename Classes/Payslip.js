@@ -1,6 +1,6 @@
 const { Employee } = require("./Employee");
 
-class TaxCalculator {
+class Payslip {
   constructor(name, annSalary, taxRates, thresholds) {
     this.employee = new Employee(name, annSalary);
     this.taxRates = taxRates;
@@ -38,18 +38,20 @@ class TaxCalculator {
     );
   }
 
-  makePaySlip() {
-    let obj = {
+  makePaySlipObj() {
+    return {
       "Monthly Payslip for:": this.employee.getName(),
       "Gross Monthly Income:": this.grossMonthlyIncome,
       "Monthly Income Tax:": this.monthlyTax(),
       "Net Monthly Income:": this.netMonthlyIncome(),
     };
+  }
 
-    console.table(obj);
+  printPaySlip(paySlipObj) {
+    console.table(paySlipObj);
   }
 }
 
 module.exports = {
-  TaxCalculator,
+  Payslip,
 };

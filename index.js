@@ -1,4 +1,4 @@
-const { TaxCalculator } = require("./Classes/TaxCalculator");
+const { Payslip } = require("./Classes/Payslip");
 const { THRESHOLDS, TAX_RATES } = require("./util/constants");
 
 let myArgs = process.argv.slice(2);
@@ -30,10 +30,12 @@ if (!parseInt(salary) || parseInt(salary) < 1) {
   employeeSalary = salary;
 }
 
-let taxCalc = new TaxCalculator(
+const payslip = new Payslip(
   employeeName,
   employeeSalary,
   TAX_RATES,
   THRESHOLDS
 );
-taxCalc.makePaySlip();
+
+const payslipObj = payslip.makePaySlipObj();
+payslip.printPaySlip(payslipObj);

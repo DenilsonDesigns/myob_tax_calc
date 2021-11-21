@@ -1,15 +1,18 @@
 class Employee {
+  #name;
+  #annSalary;
+
   constructor(name, annSalary) {
-    this.name = name;
-    this.annSalary = annSalary;
+    this.#name = name;
+    this.#annSalary = annSalary;
   }
 
   getName() {
-    return this.name;
+    return this.#name;
   }
 
   getSalary() {
-    return this.annSalary;
+    return this.#annSalary;
   }
 }
 
