@@ -18,6 +18,6 @@
 
 #### Class methods were written to "only do one thing", this makes re-factoring and testing easier.
 
-#### The tax rates and tax thresholds are exported to a constants file and could easily be changes in that one file while not breaking functionality elsewhere in the app.
+#### The tax rates and tax thresholds are exported to a constants file and could easily be changed in that one file while not breaking functionality elsewhere in the app.
 
 #### Testing: I have tested all the main functionality of the classes.
